@@ -1,10 +1,25 @@
+import {NavigationProp, RouteProp} from '@react-navigation/native';
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Button, Card, Divider} from 'react-native-paper';
 import ShortText from '../../@lib/constants/resuableComp/text/ShortText';
 import Colors from '../../@lib/constants/theme/Colors';
+type RootStackParamList = {
+  Profile: {userId: string; planet: any};
+};
 
-const PlanetDetailsScreen = ({route, navigation}) => {
+type ProfileScreenRouteProp = RouteProp<RootStackParamList, 'Profile'>;
+
+type ProfileScreenNavigationProp = NavigationProp<
+  RootStackParamList,
+  'Profile'
+>;
+
+interface ProfileScreenProps {
+  route: ProfileScreenRouteProp;
+  navigation: ProfileScreenNavigationProp;
+}
+const PlanetDetailsScreen = ({route, navigation}: ProfileScreenProps) => {
   const {planet} = route.params;
 
   return (
@@ -66,6 +81,7 @@ const PlanetDetailsScreen = ({route, navigation}) => {
         </Button>
         <Button
           mode="contained"
+          // @ts-ignore
           onPress={() => navigation.navigate('CharacterForm')}
           style={styles.rightBtn}>
           Post Planet
