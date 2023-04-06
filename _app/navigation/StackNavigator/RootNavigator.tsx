@@ -1,7 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigator from '../TabNavigator/TabNavigator';
-import HeaderWithBack from '../../@lib/constants/resuableComp/uiKits/HeaderWithBack';
+import HeaderWithBack from '../../@lib/component/resuableComp/uiKits/HeaderWithBack';
 import PlanetListScreen from '../../screens/PlanetListScreen';
 import PlanetDetailsScreen from '../../screens/PlanetDetailScreen';
 import CharacterForm from '../../screens/CharacterForm';
@@ -34,6 +34,7 @@ const RootNavigator = () => {
         <RootStack.Screen
           options={({navigation}) => ({
             title: 'Details',
+
             header: () => (
               <HeaderWithBack navigation={navigation} title="Details" />
             ),

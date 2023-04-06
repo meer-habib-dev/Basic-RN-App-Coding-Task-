@@ -1,7 +1,7 @@
 import {View, Text, StyleSheet, TextStyle} from 'react-native';
 import React from 'react';
-import {useTheme} from '../../theme/hooks/useTheme';
-import Text_Size from '../../utils/textScaling';
+import {useTheme} from '../../../constants/theme/hooks/useTheme';
+import Text_Size from '../../../constants/utils/textScaling';
 
 const BigText = (props: {
   text:

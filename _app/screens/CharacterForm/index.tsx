@@ -10,7 +10,7 @@ import {
   View,
 } from 'react-native';
 import {TextInput, Button} from 'react-native-paper';
-import TitleText from '../../@lib/constants/resuableComp/text/TitleText';
+import TitleText from '../../@lib/component/resuableComp/text/TitleText';
 import Colors from '../../@lib/constants/theme/Colors';
 import {styles} from './styles/style_character_form';
 import {useCharacterForm} from './utils/useCharacterForm';

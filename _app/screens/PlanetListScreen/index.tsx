@@ -2,10 +2,10 @@ import React from 'react';
 import {View, FlatList, Image, TouchableOpacity} from 'react-native';
 import {Card} from 'react-native-elements';
 
-import HeaderText from '../../@lib/constants/resuableComp/text/HeaderText';
-import ShortText from '../../@lib/constants/resuableComp/text/ShortText';
-import BottomSpacing from '../../@lib/constants/resuableComp/uiKits/BottomSpacing';
-import Loader from '../../@lib/constants/Animations/Loader';
+import HeaderText from '../../@lib/component/resuableComp/text/HeaderText';
+import ShortText from '../../@lib/component/resuableComp/text/ShortText';
+import BottomSpacing from '../../@lib/component/resuableComp/uiKits/BottomSpacing';
+import Loader from '../../@lib/component/Animations/Loader';
 import {styles} from './styles/styles_planet_list';
 import {usePlanetListScreen} from './utils/usePlanetListScreen';
 

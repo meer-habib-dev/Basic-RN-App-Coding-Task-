@@ -1,9 +1,10 @@
 import {NavigationProp, RouteProp} from '@react-navigation/native';
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import {Button, Card, Divider} from 'react-native-paper';
-import ShortText from '../../@lib/constants/resuableComp/text/ShortText';
+import ShortText from '../../@lib/component/resuableComp/text/ShortText';
 import Colors from '../../@lib/constants/theme/Colors';
+import {styles} from './styles/styles_planet_detail';
 type RootStackParamList = {
   Profile: {userId: string; planet: any};
 };
@@ -32,12 +33,7 @@ const PlanetDetailsScreen = ({route, navigation}: ProfileScreenProps) => {
             }.jpg`,
           }}
         />
-        <Card.Title
-          title={planet.name}
-          titleStyle={styles.name}
-          // subtitle="Card Subtitle"
-          // left={LeftContent}
-        />
+        <Card.Title title={planet.name} titleStyle={styles.name} />
         <Divider bold style={styles.divider} />
         <Card.Content>
           <View style={styles.infoContainer}>
@@ -90,40 +86,4 @@ const PlanetDetailsScreen = ({route, navigation}: ProfileScreenProps) => {
     </View>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 20,
-    marginTop: 20,
-    // alignItems: 'center',
-    backgroundColor: Colors.background,
-  },
-  image: {
-    width: '100%',
-    height: 200,
-    resizeMode: 'contain',
-    marginBottom: 20,
-  },
-  name: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginVertical: 10,
-    marginTop: 20,
-  },
-  infoContainer: {
-    alignItems: 'flex-start',
-  },
-  info: {
-    fontSize: 16,
-    marginBottom: 5,
-  },
-  buttonWrapper: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 20,
-  },
-  divider: {marginHorizontal: 15, marginVertical: 10},
-  leftBtn: {flex: 1, marginRight: 10},
-  rightBtn: {flex: 1, marginLeft: 10},
-});
 export default PlanetDetailsScreen;

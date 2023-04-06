@@ -1,23 +1,24 @@
 import {View, Text, StyleSheet, TextStyle} from 'react-native';
 import React from 'react';
-import Text_Size from '../../utils/textScaling';
+import {useTheme} from '../../../constants/theme/hooks/useTheme';
+import Text_Size from '../../../constants/utils/textScaling';
 
-const BottomTabText = (props: {
-  focused: boolean;
+const DescriptionText = (props: {
+  text: string;
   textStyle?: TextStyle;
-  text: string | number;
   numberOfLines?: number;
+  ellipsizeMode?: string;
 }) => {
+  const {colors} = useTheme();
   return (
     <View>
       <Text
         allowFontScaling={false}
         numberOfLines={props.numberOfLines}
+        ellipsizeMode={props.ellipsizeMode}
         style={[
           styles.details,
-          props.focused
-            ? {color: Colors.primary, fontWeight: '700'}
-            : {color: Colors.gray, fontWeight: '500'},
+          {color: colors.lightText},
           {...props.textStyle},
         ]}>
         {props.text}
@@ -28,9 +29,9 @@ const BottomTabText = (props: {
 
 const styles = StyleSheet.create({
   details: {
-    fontSize: Text_Size.Text_8,
-    // fontFamily: 'Muli-Bold',
+    fontSize: Text_Size.Text_9,
+    // fontFamily: 'Muli',
   },
 });
 
-export default BottomTabText;
+export default DescriptionText;

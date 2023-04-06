@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, TouchableOpacity, StyleSheet, Platform} from 'react-native';
 // import {BellIcon} from '../../../assets/svgs/SVG_LOGOS';
-import Colors from '../../theme/Colors';
-import {SCREEN_WIDTH} from '../../utils/WindowSize';
+import Colors from '../../../constants/theme/Colors';
+import {SCREEN_WIDTH} from '../../../constants/utils/WindowSize';
 import Ion from 'react-native-vector-icons/Ionicons';
-import Text_Size from '../../utils/textScaling';
+import Text_Size from '../../../constants/utils/textScaling';
 import HeaderText from '../text/HeaderText';
 import Screen from './Screen';
 // import Screen from '../Screen';

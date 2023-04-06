@@ -6,7 +6,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import React from 'react';
-import Colors from '../../theme/Colors';
+import Colors from '../../../constants/theme/Colors';
 type Props = {
   children: React.ReactNode;
   style?: ViewStyle | any;
