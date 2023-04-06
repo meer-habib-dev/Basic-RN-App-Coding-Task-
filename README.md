@@ -6,9 +6,7 @@ This project is a mobile application created using React Native. The project inc
 
 ## Demo
 
-- Android App Link - 
-- iOS App Link - 
-
+- App Download Link - https://portal.testapp.io/apps/install/JbQgzqgW0Zdr3
 
 ## Prerequisites
 
@@ -19,13 +17,11 @@ This project is a mobile application created using React Native. The project inc
 - [JDK > 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 - [Android Studio and Android SDK](https://developer.android.com/studio)
 
-
 ## Installation
 
 To run this project locally, follow the below steps:
 
 1. Clone the project repository from GitHub.
-
 
 `https://github.com/meer-habib-dev/Basic-RN-App-Coding-Task-.git`
 
@@ -46,18 +42,18 @@ This template follows a very simple project structure:
 - `_app`: This folder is the main container of all the code inside your application.
   - `@lib`: This folder contains all actions that can be dispatched to redux.
     - `api` : 'Handles all the api call through out the app'
-     - `components`: Folder to store any common component that you use through your app (such as a generic button)
+    - `components`: Folder to store any common component that you use through your app (such as a generic button)
     - `assets`: Asset folder to store all images, vectors, etc.
     - `constants`: Folder to store any kind of constant that you have.
-    - `store`: Folder to put all redux middlewares and the store. 
+    - `store`: Folder to put all redux middlewares and the store.
   - `navigation`: Folder to store the navigators.
-    - `StackNavigator` : 
-    - `TabNavigator` : 
-   - `screens`: Folder that contains all your application screens/features.
-        - `Screen`: Each screen should be stored inside its folder and inside it a file for its code and a separate one for the styles and tests.
-            - `index.js`
-            - `Screen.styles.js`
-            - `utils` : contains respective screens data, hooks and functions 
+    - `StackNavigator` :
+    - `TabNavigator` :
+  - `screens`: Folder that contains all your application screens/features.
+    - `Screen`: Each screen should be stored inside its folder and inside it a file for its code and a separate one for the styles and tests.
+      - `index.js`
+      - `Screen.styles.js`
+      - `utils` : contains respective screens data, hooks and functions
   - `App.js`: Main component that starts your whole app.
   - `index.js`: Entry point of your application as per React-Native standards.
 
@@ -69,7 +65,6 @@ The template already has scripts to execute the project calling a specific envir
 
 To define which env you want to use, just keep the structure `yarn [platform]: [environment]`
 
-
 DEV: `yarn ios` or `yarn android`
 
 STG: `yarn ios:staging` or `yarn android:staging`
@@ -79,7 +74,6 @@ PROD: `yarn ios:prod` o `yarn android:prod`
 Also, you can use npm following the same rule as before: `npm run ios:staging`
 
 Modify the environment variables files in root folder (`.env.development`, `.env.production` and `.env.staging`)
-
 
 #### Android
 
@@ -99,11 +93,14 @@ To create a new scheme:
 - Then edit the newly created scheme to make it use a different env file. From the same "manage scheme" window:
 
   Expand the "Build" tab on the left menu
+
   - Click "Pre-actions", and under the plus sign select "New Run Script Action"
   - Where it says "Type a script or drag a script file", type: `echo ".env.qa" > /tmp/envfile` replacing `.env.qa` with your file.
+
 - Also, you will need to select the executable for the new schema:
 
   Expand the "Run" tab on the left menu
+
   - Under the "Executable" dropdown select the ".app" you would like to use for that schema
 
 ## Generate production version
